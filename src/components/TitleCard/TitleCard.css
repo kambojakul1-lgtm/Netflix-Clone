@@ -1,0 +1,234 @@
+.title-cards {
+  width: 100%;
+
+  margin-top: 30px;
+
+  color: #fff;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title-cards h2 {
+  margin: 0 0 15px;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   CARD LIST
+========================= */
+
+.card-list {
+  width: 100%;
+
+  display: flex;
+
+  gap: 12px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  padding-bottom: 10px;
+
+  touch-action: pan-x;
+}
+
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  width: 240px;
+
+  text-decoration: none;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+
+  height: 135px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 4px;
+}
+
+.card p {
+  margin: 8px 0 0;
+
+  font-size: 14px;
+
+  color: #fff;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.card:hover {
+  transform: scale(1.05);
+
+  z-index: 5;
+}
+
+.card:hover img {
+  border-radius: 5px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .title-cards {
+    margin-top: 25px;
+  }
+
+  .title-cards h2 {
+    font-size: 18px;
+
+    margin-bottom: 12px;
+  }
+
+  .card-list {
+    gap: 10px;
+  }
+
+  .card {
+    width: 200px;
+  }
+
+  .card img {
+    height: 112px;
+  }
+
+  .card p {
+    font-size: 13px;
+
+    margin-top: 6px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .title-cards {
+    margin-top: 22px;
+  }
+
+  .title-cards h2 {
+    font-size: 16px;
+
+    margin-bottom: 10px;
+  }
+
+  .card-list {
+    gap: 9px;
+
+    padding-right: 5%;
+  }
+
+  .card {
+    width: 160px;
+  }
+
+  .card img {
+    width: 160px;
+
+    height: 90px;
+
+    border-radius: 3px;
+  }
+
+  .card p {
+    font-size: 11px;
+
+    margin-top: 5px;
+  }
+
+  /* Disable hover zoom on touch devices */
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .title-cards {
+    margin-top: 18px;
+  }
+
+  .title-cards h2 {
+    font-size: 14px;
+
+    margin-bottom: 8px;
+  }
+
+  .card-list {
+    gap: 8px;
+
+    padding-right: 4%;
+  }
+
+  .card {
+    width: 135px;
+  }
+
+  .card img {
+    width: 135px;
+
+    height: 76px;
+
+    border-radius: 3px;
+  }
+
+  .card p {
+    font-size: 10px;
+
+    margin-top: 4px;
+  }
+}
